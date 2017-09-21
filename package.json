@@ -1,7 +1,7 @@
 {
   "name": "draft-js-prism-plugin",
   "version": "0.0.0",
-  "description": "Add code highlighting support to your DraftJS editor",
+  "description": "Add syntax highlighting support to your DraftJS editor",
   "repository": {
     "type": "git",
     "url": "https://github.com/withspectrum/draft-js-prism-plugin.git"
