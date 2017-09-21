@@ -1,0 +1,44 @@
+{
+  "name": "draft-js-prism-plugin",
+  "version": "0.0.0",
+  "description": "Add code highlighting support to your DraftJS editor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/withspectrum/draft-js-prism-plugin.git"
+  },
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "precommit": "lint-staged",
+    "prebuild": "rimraf dist",
+    "build": "babel src --out-dir dist --ignore '*.test.js'",
+    "test": "jest src",
+    "prettier": "prettier --write --single-quote --trailing-comma es5 'src/**/*.js'",
+    "flow": "flow src"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote --trailing-comma es5",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.55.0",
+    "husky": "^0.14.3",
+    "jest": "^21.1.0",
+    "lint-staged": "^4.2.1",
+    "prettier": "^1.7.0",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "draft-js-prism": "ngs/draft-js-prism#6edb31c3805dd1de3fb897cc27fced6bac1bafbb",
+    "react": "*"
+  },
+  "peerDependencies": {
+    "prismjs": "^1.0.0"
+  }
+}
