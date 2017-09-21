@@ -3,7 +3,7 @@ import React from 'react';
 import PrismDecorator from 'draft-js-prism';
 
 type Options = {
-  prism: Function
+  prism: Object 
 };
 
 const prismPlugin = (options: Options) => {

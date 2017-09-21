@@ -3,7 +3,7 @@ import createPrismPlugin from '../';
 
 it('should return an object', () => {
   const plugin = createPrismPlugin({
-    prism: () => {},
+    prism: {},
   });
   expect(plugin).toBeInstanceOf(Object);
 })
