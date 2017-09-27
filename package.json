@@ -35,7 +35,7 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "draft-js-prism": "ngs/draft-js-prism#6edb31c3805dd1de3fb897cc27fced6bac1bafbb",
+    "draft-js-prism": "^1.0.4",
     "react": "*"
   },
   "peerDependencies": {
