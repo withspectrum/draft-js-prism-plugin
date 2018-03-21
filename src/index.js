@@ -17,16 +17,12 @@ const prismPlugin = (options: Options) => {
       new PrismDecorator({
         prism: prism,
         getSyntax(block) {
-          const language = block.getData().get('language');
+          const data = block.getData();
+          const language = data.get('language') || data.get('syntax');
           if (typeof prism.languages[language] === 'object') {
             return language;
           }
           return null;
-        },
-        render({ type, children }) {
-          return (
-            <span className={`prism-token token ${type}`}>{children}</span>
-          );
         },
       }),
     ],
