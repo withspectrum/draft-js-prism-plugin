@@ -14,6 +14,7 @@
     "build": "babel src --out-dir dist --ignore '*.test.js'",
     "test": "jest src",
     "prettier": "prettier --write --single-quote --trailing-comma es5 'src/**/*.js'",
+    "prepublishOnly": "yarn run build",
     "flow": "flow src"
   },
   "lint-staged": {
