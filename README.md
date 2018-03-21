@@ -4,14 +4,55 @@ A DraftJS plugin to add syntax highlighting support to your code blocks. Use in 
 
 ## Usage
 
+First, create the plugin and add it to the `plugins` array of your PluginsEditor:
+
 ```JS
 import Prism from 'prismjs';
 import createPrismPlugin from 'draft-js-prism-plugin';
 
-const prismPlugin = createPrismPlugin({
-  // Provide your own instance of PrismJS
-  prism: Prism
-});
+class MyEditor extends React.Component {
+  constructor(props) {
+    super(props);
+
+    const prismPlugin = createPrismPlugin({
+      // It's required to provide your own instance of Prism
+      prism: Prism
+    });
+
+    this.state = {
+      plugins: [prismPlugin]
+    }
+  }
+
+  render() {
+    return (
+      <PluginsEditor
+        plugins={this.state.plugins}
+      />
+    )
+  }
+}
+```
+
+Now add a `language` key to the data of the code block you want to highlight:
+
+```JS
+// TODO: Somehow get a code block and its key, this is up to you
+const { block, key } = getCurrentBlock();
+if (block.getType() !== "code-block") return;
+
+// Replace the code block with a new one with the data.language changed to "javascript"
+const data = block.getData().merge({ language: 'javascript' });
+const newBlock = block.merge({ data });
+const newContentState = currentContent.merge({
+  blockMap: blockMap.set(key, newBlock),
+  selectionAfter: currentSelection
+})
+
+// Now that code block will be highlighted as JavaScript!
+this.setState({
+  editorState: EditorState.push(editorState, newContentState, "change-block-data")
+})
 ```
 
 ## License
