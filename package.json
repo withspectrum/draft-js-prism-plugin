@@ -1,6 +1,6 @@
 {
   "name": "draft-js-prism-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Add syntax highlighting support to your DraftJS editor",
   "repository": {
     "type": "git",
