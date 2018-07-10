@@ -9,6 +9,7 @@ First, create the plugin and add it to the `plugins` array of your PluginsEditor
 ```JS
 import Prism from 'prismjs';
 import createPrismPlugin from 'draft-js-prism-plugin';
+import "prismjs/themes/prism.css"; // add prism.css to add highlights  
 
 class MyEditor extends React.Component {
   constructor(props) {
