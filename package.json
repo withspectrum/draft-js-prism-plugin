@@ -31,7 +31,7 @@
     "flow-bin": "^0.55.0",
     "husky": "^0.14.3",
     "jest": "^21.1.0",
-    "lint-staged": "^4.2.1",
+    "lint-staged": "^4.3.0",
     "prettier": "^1.14.2",
     "prismjs": "^1.15.0",
     "rimraf": "^2.6.2"
