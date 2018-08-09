@@ -33,7 +33,7 @@
     "jest": "^21.1.0",
     "lint-staged": "^4.2.1",
     "prettier": "^1.14.2",
-    "prismjs": "^1.0.0",
+    "prismjs": "^1.15.0",
     "rimraf": "^2.6.2"
   },
   "dependencies": {
