@@ -34,7 +34,7 @@
     "lint-staged": "^4.3.0",
     "prettier": "^1.16.1",
     "prismjs": "^1.15.0",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.7.1"
   },
   "dependencies": {
     "draft-js-prism": "^1.0.6"
